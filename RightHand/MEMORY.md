@@ -41,6 +41,7 @@ Helping Tatiana sell her clothes: identify items from photos (brand, type, condi
 - Never post, sell, accept offers, or message buyers without her OK.
 
 ## Key facts & decisions
+- 2026-10-08: **RULE — only list items (or bundles) expected to sell for $20+.** Everything under $20 gets bundled into a $20+ lot, taken to an in-person buy-for-cash store, or donated.
 - 2026-10-08: Chose "max cash" over "gone fast."
 - 2026-10-08: Asked to drop faith-based framing.
 - Mental model shared: "two prices" — item value vs. time/effort cost. Low-value items → bundle or donate.
