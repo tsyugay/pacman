@@ -20,7 +20,7 @@ Helping Tatiana sell her clothes: identify items from photos (brand, type, condi
 | 1 | Black one-shoulder gown w/ nude lining & slit (style 2286X), Bloomingdale's exclusive, retail $238 | Aqua | 2 | NWT | $70–100 | Poshmark / eBay | A – list solo | not listed |
 | 2 | Houndstooth mermaid midi dress, pearl buttons | SHEIN | L (US 8/10) | Good | $10–15 | Depop / Poshmark | B | not listed |
 | 3 | Yellow tie-front smocked ruffle mini dress, made in Peru | Blanco by Nature | L | Good | $12–20 | Poshmark / Depop | B (summer item — best Apr–Jun) | not listed |
-| 4 | Patchwork paisley halter tiered ruffle mini dress | ? (need tag) | ? | Good | TBD | TBD | ? | need tag photo |
+| 4 | Patchwork paisley halter tiered ruffle mini dress | SHEIN | ? | Good | $8–12 | bundle w/ #3 | C → Summer dress lot | not listed |
 | 5 | Gray quarter-zip sweater (men's) | John Ashford | LT (large tall) | Good | $10–15 | eBay | B | not listed |
 | 6 | Patchwork flower long-sleeve slub top | SHEIN | M (US 6) | Good | $5–8 | bundle | C | not listed |
 | 7 | Burgundy ruched crop top w/ ties | Fashion Nova | ? | check left sleeve for snag | $5–8 | bundle | C | need size + flaw check |
@@ -47,6 +47,8 @@ Helping Tatiana sell her clothes: identify items from photos (brand, type, condi
 - Mental model shared: "two prices" — item value vs. time/effort cost. Low-value items → bundle or donate.
 
 ## Current priorities
+- Listing plan ($20+ rule): (1) Aqua gown solo, (2) BCBG blazer solo, (3) Size M tops lot (#6,9,13,14,15) $25–30, (4) Fall layers lot (#2,11,12) $25–35, (5) Summer dress lot (#3,4) $20–28 — maybe hold till spring. Rest (#5,7,8) → Plato's Closet/Buffalo Exchange, then donate.
+- Gown listing drafted 2026-10-08: list $95, floor ~$70.
 - Batches 1–2 logged (15 items). Bundle plan: group Tier C by SIZE (Size M lot = #6, 9, 13, 14, 15). Star item: Aqua gown NWT — list before holiday-party season (Nov–Dec).
 - Get photos of items → build the inventory → triage into tiers (list solo / bundle / donate).
 - Open questions: deadline? roughly how many items? any brands she knows are valuable?
