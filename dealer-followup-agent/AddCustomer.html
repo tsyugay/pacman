@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      body { font-family: Arial, sans-serif; font-size: 13px; margin: 12px; color: #202124; }
+      label { display: block; font-weight: bold; margin: 10px 0 4px; }
+      .hint { font-weight: normal; color: #5f6368; font-size: 12px; }
+      input, textarea { width: 100%; box-sizing: border-box; padding: 6px; border: 1px solid #dadce0; border-radius: 4px; font: inherit; }
+      textarea { min-height: 110px; resize: vertical; }
+      .row { display: flex; gap: 8px; }
+      .row > div { flex: 1; }
+      button { margin-top: 14px; width: 100%; padding: 9px; background: #1a73e8; color: #fff; border: 0; border-radius: 4px; font-weight: bold; cursor: pointer; }
+      button:disabled { background: #9aa0a6; cursor: default; }
+      #msg { margin-top: 10px; }
+      .ok { color: #188038; } .err { color: #d93025; }
+    </style>
+  </head>
+  <body>
+    <form id="f" onsubmit="submitForm(event)">
+      <div class="row">
+        <div><label for="firstName">First name *</label><input id="firstName" name="firstName" required></div>
+        <div><label for="lastName">Last name</label><input id="lastName" name="lastName"></div>
+      </div>
+
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="dealership">Dealership</label>
+      <input id="dealership" name="dealership" value="<?= defaultDealership ?>">
+
+      <label for="vehicle">Vehicle <span class="hint">e.g. 2026 Toyota RAV4 Hybrid XLE</span></label>
+      <input id="vehicle" name="vehicle">
+
+      <label for="purchaseDate">Purchase / delivery date *</label>
+      <input id="purchaseDate" name="purchaseDate" type="date" required>
+
+      <label for="dealNotes">What happened during the deal <span class="hint">Private. Only used to personalize emails if AI is on. Never copied in word for word.</span></label>
+      <textarea id="dealNotes" name="dealNotes" placeholder="e.g. First car for their daughter starting college. Loved the blue paint. Planning a road trip to the Smokies next month. Took a while to find the right trim."></textarea>
+
+      <label for="reviewLink">Review / survey link <span class="hint">Optional. Overrides the default in Settings.</span></label>
+      <input id="reviewLink" name="reviewLink" type="url">
+
+      <button id="btn" type="submit">Add customer</button>
+      <div id="msg"></div>
+    </form>
+
+    <script>
+      function todayLocal() {
+        var d = new Date();
+        return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+      }
+      document.getElementById('purchaseDate').value = todayLocal();
+
+      function submitForm(e) {
+        e.preventDefault();
+        var form = document.getElementById('f');
+        var btn = document.getElementById('btn');
+        var msg = document.getElementById('msg');
+        btn.disabled = true;
+        msg.textContent = 'Saving…';
+        msg.className = '';
+        var data = {};
+        Array.prototype.forEach.call(form.elements, function (el) { if (el.name) data[el.name] = el.value; });
+        google.script.run
+          .withSuccessHandler(function (text) {
+            msg.textContent = text;
+            msg.className = 'ok';
+            btn.disabled = false;
+            var keep = { dealership: data.dealership };
+            form.reset();
+            document.getElementById('dealership').value = keep.dealership;
+            document.getElementById('purchaseDate').value = todayLocal();
+            document.getElementById('firstName').focus();
+          })
+          .withFailureHandler(function (err) {
+            msg.textContent = err.message || String(err);
+            msg.className = 'err';
+            btn.disabled = false;
+          })
+          .addCustomer(data);
+      }
+    </script>
+  </body>
+</html>
